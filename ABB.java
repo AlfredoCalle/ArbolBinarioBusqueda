@@ -245,4 +245,19 @@ public class ABB<E extends Comparable<E>> {
         return nuevo;
     }
 
+    public boolean degenerado() {
+        return degenerado(root);
+    }
+    private boolean degenerado(Node<E> p) {
+        if(p == null){
+            return true;
+        }
+        if(p.left != null && p.right != null) {
+            return false;
+        }        
+        if(p.left == null) {
+            return degenerado(p.right);
+        }
+        return degenerado(p.left);
+    }
 }
