@@ -164,7 +164,7 @@ public class ABB<E extends Comparable<E>> {
         if (n == null) {
             return 0;
         }
-        return 1 + size(root.getLeft()) + size(root.getRigh());
+        return 1 + size(n.getLeft()) + size(n.getRigh());
     }
 
 
